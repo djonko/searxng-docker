@@ -7,7 +7,7 @@ services:
     image: caddy:2-alpine
     network_mode: host
     volumes:
-      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - /opt/data-adm-docker/volumes/searxng/caddy/Caddyfile:/etc/caddy/Caddyfile:ro
       - caddy-data:/data:rw
       - caddy-config:/config:rw
     environment:
@@ -42,7 +42,7 @@ services:
     ports:
      - "127.0.0.1:8080:8080"
     volumes:
-      - ./searxng:/etc/searxng:rw
+      - "/opt/data-adm-docker/volumes/searxng:/etc/searxng"
     environment:
       - SEARXNG_BASE_URL=https://${SEARXNG_HOSTNAME:-localhost}/
     cap_drop:
