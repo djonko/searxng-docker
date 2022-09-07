@@ -44,10 +44,12 @@ services:
       - searxng
     ports:
      - "127.0.0.1:8080:8080"
+     - "192.168.20.30:8080:8080"
     volumes:
       - "/opt/data-adm-docker/volumes/searxng/data:/etc/searxng"
     environment:
-      - SEARXNG_BASE_URL=https://${SEARXNG_HOSTNAME:-localhost}/
+      - TZ=America/Montreal
+      #- SEARXNG_BASE_URL=https://${SEARXNG_HOSTNAME:-localhost}/
     cap_drop:
       - ALL
     cap_add:
