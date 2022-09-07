@@ -49,7 +49,7 @@ services:
       - "/opt/data-adm-docker/volumes/searxng/data:/etc/searxng"
     environment:
       - TZ=America/Montreal
-      #- SEARXNG_BASE_URL=https://${SEARXNG_HOSTNAME:-localhost}/
+      - SEARXNG_BASE_URL=https://${SEARXNG_HOSTNAME:-localhost}/
     cap_drop:
       - ALL
     cap_add:
