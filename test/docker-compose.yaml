@@ -41,6 +41,3 @@ networks:
     ipam:
       driver: default
 
-volumes:
-  caddy-data:
-  caddy-config:
