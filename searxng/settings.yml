@@ -5,9 +5,16 @@ server:
   secret_key: "ultrasecretkey"  # change this!
   limiter: true  # can be disabled for a private instance
   image_proxy: true
+  method: "GET"
+search:
+  autocomplete: "duckduckgo"
 ui:
   static_use_hash: true
 redis:
   url: redis://redis:6379/0
 general:
-  instance_name: "Home Search"
+  instance_name: "My-Search"
+  debug: false
+  enable_metrics: true
+  contact_url: false
+
