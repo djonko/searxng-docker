@@ -37,10 +37,10 @@
         Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
 
         # Enable cross-site filter (XSS) and tell browser to block detected attacks
-        #X-XSS-Protection "1; mode=block"
+        X-XSS-Protection "1; mode=block"
 
         # Prevent some browsers from MIME-sniffing a response away from the declared Content-Type
-        #X-Content-Type-Options "nosniff"
+        X-Content-Type-Options "nosniff"
 
         # Disable some features
         Permissions-Policy "accelerometer=(),ambient-light-sensor=(),autoplay=(),camera=(),encrypted-media=(),focus-without-user-activation=(),geolocation=(),gyroscope=(),magnetometer=(),microphone=(),midi=(),payment=(),picture-in-picture=(),speaker=(),sync-xhr=(),usb=(),vr=()"
