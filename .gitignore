@@ -5,3 +5,8 @@ caddy
 srv
 searxng/uwsgi.ini
 searxng-docker/
+/.idea/.gitignore
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/searxng-docker.iml
+/.idea/vcs.xml
