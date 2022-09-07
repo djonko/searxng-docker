@@ -5,6 +5,7 @@ services:
   caddy:
     container_name: caddy
     image: caddy:2-alpine
+    restart: unless-stopped
     network_mode: host
     volumes:
       - /opt/data-adm-docker/volumes/searxng/caddy/Caddyfile:/etc/caddy/Caddyfile:ro
@@ -23,6 +24,7 @@ services:
     container_name: redis
     image: "redis:alpine"
     command: redis-server --save "" --appendonly "no"
+    restart: unless-stopped
     networks:
       - searxng
     tmpfs:
@@ -37,6 +39,7 @@ services:
   searxng:
     container_name: searxng
     image: searxng/searxng:latest
+    restart: unless-stopped
     networks:
       - searxng
     ports:
