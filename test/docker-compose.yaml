@@ -25,7 +25,7 @@ services:
     networks:
       - searxng
     ports:
-     - "127.0.0.1:8080:8080"
+     - "8880:8080"
     volumes:
       - "/opt/data-adm-docker/volumes/searxng/data:/etc/searxng"
     environment:
